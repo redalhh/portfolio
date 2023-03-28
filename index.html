@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-PVbYsOL/YLHx1RpSfXh8mpgW/+knv/A4wLZo36t4HuN/DWcM1Bxhoxl73Xz9FGC+RnffPQnC28LKFJm/N8pDw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-YELRi8R2Q0URZ5w03ZGkMUKF8f0K3qjhP7rx67/xCzSHf8pIpt3qUjw6U1aANRm8kiL2CnUifzTQrTTBqwWV3w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <style>
+    .certif-container {
+    width: 1061px;
+    height: 900px;
+    
+  }
+  
+  iframe {
+    width: 1061px;
+    height: 901px;
+  }
+        .home-img img{
+          opacity: 0;
+          animation: fadeIn 2s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 0.6; }
+        }
+
+        .home-img img:hover {
+            opacity: 1;
+            }
+        
+        model-viewer {
+            width: 60%;
+            height: 60%;
+            margin: 0 auto;
+            }
+    
+      </style>
+    
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <h1 class="logo">Portfolio</h1>
+        </div>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about" >About</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications" >Certifications</a>
+            <a href="#contact" >Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi, It's Me</h3>
+            <h1>Mohamed Reda Lhorri</h1>
+            <h3>and I'm a <span>Computer Science Engineer</span></h3>
+            <p> I'm passionate about web development and Python and I'm looking for an opportunity to work in a company that will help me to further develop my skills and expose me to new and exciting challenges.</p>
+            
+            <div class="icons">
+                <a href="facebook"><i class='bx bxl-facebook'></i></a>
+                <a href="instagram"><i class='bx bxl-instagram'></i></a>
+                <a href="linkedin"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        <a href="#" class="btn">Get In Touch</a>
+    </div>
+    
+    <!-- <model-viewer src="redamodel.glb" camera-controls></model-viewer> -->
+
+        <div class="home-img">
+         <img src="images/redapdp.png" alt="" class="img-fluid"> 
+        </div>
+    </section>
+
+
+    <section class="about" id="about">
+        <model-viewer src="redamodel.glb" camera-controls></model-viewer>
+        <!-- <div class="about-img">
+            <img src="images/redareda.png" class="aboutimg">
+        </div> -->
+        <div class="about-content">
+            <h2 class="heading">About <span >Me</span></h2>
+            <h3>Computer Science Engineer</h3>
+            <p>I'm passionate about web development and Python and I'm looking for an opportunity to work in a company that will help me to further develop my skills and expose me to new and exciting challenges.</p>
+            <a href="#" class="btn">Download CV</a>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="heading">My <span>Projects</span></h2>
+        <div class="projects-container">
+            <div class="project-box">
+                <i class='bx bx-face'></i>
+                <h3>EMOTION RECOGNITION USING PYTHON</h3>
+                <p> The project involves developing a model that can recognize emotions such as happiness, sadness, anger, and surprise by analyzing features such as facial muscle movements and changes in facial expression.  </p>
+                
+                </div>
+          
+            <div class="project-box">
+                <i class='bx bxs-microphone-alt'></i>
+                <h3>SPEECH TO TEXT APPLICATION</h3>
+                <p>Application that converts spoken Arabic language into written text format using automatic speech recognition technology.</p>
+                
+                </div>
+
+            <div class="project-box">
+                <i class='bx bx-hotel'></i>
+                <h3>HOTEL MANAGEMENT</h3>
+                <p>A hotel management web app developed using dotnet and C# automates hotel operations such as booking, room management, billing, and customer service, enhancing efficiency and accessibility for both staff and customers.</p>
+                
+                </div>
+        </div>
+    
+    </section>
+
+    <section class="certifications" id="certifications">
+        <h2 class="heading">My <span>Certifications</span></h2>
+        <div class="certif-container">
+            <div class="certif-box">
+            <iframe id="react" src="/images/react.pdf" scrolling="no"></iframe>
+        </div>
+    </div>
+
+        <div class="certif-container">
+            <div class="certif-box">
+            <iframe id="back-end" src="/images/dev back-end.pdf" scrolling="no"></iframe>
+        </div>
+    </div>
+    
+        <div class="certif-container">
+            <div class="certif-box">
+            <iframe id="python" src="/images/Python.pdf" scrolling="no"></iframe>
+        </div>
+        </div>
+    
+    </section>
+ 
+
+
+
+</body>
+
+</html>
