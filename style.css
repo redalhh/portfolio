@@ -21,7 +21,11 @@
 }
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
     /* overflow: hidden; */
+}
+html *, html *:before, html *:after, html *::before, html *::after {
+  box-sizing: inherit;
 }
 
 html::-webkit-scrollbar {
@@ -258,6 +262,8 @@ section{
   .about-content h3 {
     font-size: 2.6rem;
   }
+
+
     .about-content p {
         font-size: 1.6rem;
         margin: 2rem 0 3rem;
@@ -286,6 +292,7 @@ section{
         transition: .5s;
 
     }
+   
 
     .projects-container .project-box:hover{
         border-color: var(--main-color);
@@ -293,6 +300,11 @@ section{
     }
     .projects-container .project-box:hover h3 {
         color: var(--main-color);
+      }
+      .projects-container small {
+        margin-top: 1000px;
+        font-size: 0.8em;
+        color: var(--bg-color);
       }
     .projects-container h3{
         margin-bottom: 2rem;
@@ -311,14 +323,170 @@ section{
     .projects-container .btn{ 
         margin-top: 3rem;
     }
+    .certifications{
+      background: var(--second-bg-color);
+      
+    }
 
-    .certif-container{
+    .hero {
+      width: 100%;
+      height: 60vh;
+      background-color: transparent;
+      position: relative;
+    }
+
+    ul {
+      padding: 0;
+      margin-top: 60px;
+      list-style: none;
+    }
+    .slider {
+      width: 100%;
+      height: 60vh;
+      position: relative;
       display: flex;
-      justify-content: space-around;
+      transition: all 0.5s;
+      overflow: hidden;
+    }
+    .slider .slide {
+      width: 20%;
+      height: 100%;
+      position: relative;
+      text-align: center;
+      transition: 0.5s;
+    }
+    .slider .slide:nth-child(1) {
+      background: url("/images/react_page-0001.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: left;
+    }
+    .slider .slide:nth-child(2) {
+      background: url("/images/dev\ back-end_page-0001.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: left;
+    }
+    .slider .slide:nth-child(3) {
+      background: url("/images/Python_page-0001.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: left;
+    }
+    .slider .slide:nth-child(4) {
+      background: url("/images/CCNARS.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: left;
+    }
+    .slider .slide:hover {
+      width: 41%;
+      cursor: pointer;
+    }
+
+    .contact h2{
+      margin-bottom: 3rem;
+    }
+
+    .contact form{
+      max-width: 70rem;
+      margin: 1rem auto;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .contact form .inputBox{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .contact form .inputBox input,
+    .contact form textarea{
+      width: 100%;
+      padding: 1.5rem;
+      margin: .7rem 0;
+      border: none;
+      outline: none;
+      border-radius: .8rem;
+      font-size: 1.6rem;
+      background: var(--second-bg-color);
+      color: var(--text-color);
+    }
+
+    .contact form .inputBox input{
+      width: 49%;   
+    }
+    
+    .contact form textarea{
+      resize: none;
+    }
+
+    .contact form .btn{
+     
+      margin-top: 2rem;
+      cursor: pointer;
+    }
+
+    .footer{
+      display: flex;
+      justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 2rem;
+      padding: 2rem 9%;
+      background: var(--second-bg-color);
+      position: relative;
+
+    }
+    .footer-text p{
+      font-size: 1.3rem;
+      color: var(--text-color);
+    }
+
+    .footer-icon-top a{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: .8rem;
+      border-radius: .8rem;
+      background: var(--main-color);
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 3.2rem;
+      margin-right: 2rem;
+      
+    }
+    .footer-icon-top a:hover{
+      box-shadow: 0 0 1rem var(--main-color);
+    }
+
+    .footer-icon-top a i{
+      font-size: 2.4rem;
+      color: var(--second-bg-color);
+    }
+
+    .footer-icon a{
+      display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-top: .8rem;
+    margin-left: 1rem;
   }
-  
+
+  .footer-icon a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+  }
+    
+
 
 
